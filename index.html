@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác thực Key</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3>Đang xác thực...</h3>
+            <p>Vui lòng đợi trong giây lát</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="authForm" class="auth-form">
+            <h1>🔐 Xác thực truy cập</h1>
+            
+            <div class="key-info">
+                <strong>⚠️ Lưu ý quan trọng:</strong><br>
+                • Mỗi key chỉ được sử dụng 1 lần duy nhất<br>
+                • Key được lưu trên GitHub Gist<br>
+                • Sau khi xác thực sẽ tự động chuyển trang
+            </div>
+
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="keyInput" 
+                    placeholder="Nhập key truy cập..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <button id="verifyBtn" onclick="verifyKey()">🚀 Xác thực & Truy cập</button>
+            
+            <div id="message"></div>
+            
+            <!-- Debug Info -->
+            <div class="debug-info">
+                <strong>🔧 System Status:</strong><br>
+                <div id="debugInfo">Đang kiểm tra hệ thống...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
